@@ -6,13 +6,13 @@ rc-update add php-fpm8
 rc-service apache2 start
 rc-update add apache2
 
-apk add vim samba -y
+apk add vim samba
 mv vimrc ../.vimrc
 echo "[code-share]
   wide links = yes
   browsable = yes
   writable = yes
-  path = /var/www/localhost/htdocs"
+  path = /var/www/localhost/htdocs" >> /etc/samba/smb.conf
 smbpasswd -a apache
 rc-update add samba
 rc-service samba start
