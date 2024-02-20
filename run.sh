@@ -1,5 +1,5 @@
 #!/bin/bash
-apk update && apk upgrade -y
+apk update && apk upgrade
 apk add apache2 && apk add apache2-proxy php8-fpm
 rc-service php-fpm8 start
 rc-update add php-fpm8
